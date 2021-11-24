@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Login</title>
+        <style>
+            table, th, td {
+                border: 1px black;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+        <label for="Username">Username</label><br>
+        <input type="text" id="uname" name="fullname"><br>
+        <label for="password">password </label><br>
+        <input type="password" id="pwd" name="password"><br>
+        </form>
+        <button onclick="login()"type="button">Login</button>
+    </body>
+    <script type="text/javascript">
+        function login() {
+            let username = document.getElementById('username')value;
+            let password = document.getElementById('pwd').value;
+            if (username == dataBase.username && password == dataBase.password){
+                const payload = {
+                  username: username,
+                  password: password,
+              };
+              document.getElementById("temp-login").innerHTML = JSON.stringify(payload);
+            } else {
+                  alert('Gagal Masuk')
+        }
+    }
+
+</script>
+</html>
